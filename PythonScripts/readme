@@ -1,0 +1,9 @@
+readme
+
+The paths are relatively defined according to the following directiry structure
+
+
+Root
+|- TestImages
+|- PythonScripts
+   |-milestoneX.py
