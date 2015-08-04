@@ -1,3 +1,5 @@
+#start/stop video feed
+
 import cv2
 
 vidCap = cv2.VideoCapture(0)

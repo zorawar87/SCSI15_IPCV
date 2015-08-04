@@ -1,3 +1,5 @@
+#manual shape construction
+
 import cv2
 import numpy
 
