@@ -37,19 +37,21 @@ HSV4 = cv2.cvtColor(img4, cv2.COLOR_BGR2HSV)
 (h4, s4, v4) = cv2.split(HSV4)
 Hhist4 = cv2.calcHist([h4], [0], None, [256], [0, 256])
 
-method = 0
+method = 4
 
 print "compare greyscales"
+Gcmp11 = cv2.compareHist(Ghist1, Ghist1, method)
 Gcmp12 = cv2.compareHist(Ghist1, Ghist2, method)
 Gcmp13 = cv2.compareHist(Ghist1, Ghist3, method)
 Gcmp34 = cv2.compareHist(Ghist3, Ghist4, method)
-print Gcmp12, Gcmp13, Gcmp34 
+print Gcmp11, Gcmp12, Gcmp13, Gcmp34 
 
 print "compare hues"
+Hcmp11 = cv2.compareHist(Hhist1, Hhist1, method)
 Hcmp12 = cv2.compareHist(Hhist1, Hhist2, method)
 Hcmp13 = cv2.compareHist(Hhist1, Hhist3, method)
 Hcmp34 = cv2.compareHist(Hhist3, Hhist4, method)
-print Hcmp12, Hcmp13, Hcmp34 
+print Hcmp11, Hcmp12, Hcmp13, Hcmp34 
 
 
 
@@ -70,10 +72,11 @@ MDhist3 = cv2.calcHist([b3,g3,r3], [0], None, [256], [0, 256])
 MDhist4 = cv2.calcHist([b4,g4,r4], [0], None, [256], [0, 256])
 
 print "Comparing Multidimentional RGB"
-MDhist12 = cv2.compareHist(MDhist1, MDhist2, method)
-MDhist13 = cv2.compareHist(MDhist1, MDhist3, method)
-MDhist34 = cv2.compareHist(MDhist3, MDhist4, method)
-print MDhist12, MDhist13, MDhist34
+MDcmp11 = cv2.compareHist(MDhist1, MDhist1, method)
+MDcmp12 = cv2.compareHist(MDhist1, MDhist2, method)
+MDcmp13 = cv2.compareHist(MDhist1, MDhist3, method)
+MDcmp34 = cv2.compareHist(MDhist3, MDhist4, method)
+print MDcmp11, MDcmp12, MDcmp13, MDcmp34
 
 
 
