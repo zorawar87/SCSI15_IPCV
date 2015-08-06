@@ -50,7 +50,7 @@ def hist_lines(im):
 
 
 
-fname = '../../TestImages/SnowLeo3.jpg'
+fname = '../TestImages/SnowLeo3.jpg'
 im = cv2.imread(fname)
 
 if im is None:
